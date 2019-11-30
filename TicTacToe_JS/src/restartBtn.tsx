@@ -1,9 +1,9 @@
-import React from "react";
+import * as React from "react"
 
-export class RestartBtn extends React.Component {
+export class RestartBtn extends React.Component<{}, {}> {
 
     // Fire a global event notifying restart of game
-    handleClick(e) {
+    handleClick(e: React.MouseEvent<HTMLAnchorElement>) {
         var event = document.createEvent("Event");
         event.initEvent("restart", false, true); 
         window.dispatchEvent(event);
